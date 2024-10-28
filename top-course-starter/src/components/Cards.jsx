@@ -3,10 +3,11 @@ import Card from "./Card";
 
 
 const Cards = (props) => {
+    console.log("Printing Category selected");
     console.log(props.category);
-    console.log(props.courses);
+    
 
-    // let category = props.category;
+    
     const [likedCourses, setLikedCourses] = useState([]);
     //   let allCourse = [];
 
@@ -22,7 +23,7 @@ const Cards = (props) => {
     // };
 
     function getCourses() {
-        // if (category === "All") {
+         //if (props.category === "All") {
             let allCourses = [];
             Object.values(props.courses).forEach((array) => {
                 array.forEach((courseData) => {
@@ -30,7 +31,7 @@ const Cards = (props) => {
                 });
             });
             return allCourses;
-        // }
+         //}
         // else
         // {
         //     return props.courses[category];
